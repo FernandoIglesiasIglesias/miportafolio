@@ -105,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
     gap: theme.spacing(4),
     flexWrap: "wrap",
     marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(3),
   },
   contactCard: {
     display: "flex",
@@ -133,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     width: "50px",
     height: "50px",
-    marginBottom: theme.spacing(2),
+    
   },
   link: {
     textDecoration: "none",

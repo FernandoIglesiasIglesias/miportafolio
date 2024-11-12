@@ -77,66 +77,83 @@ const Technologies = () => {
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        padding: theme.spacing(5),
-        borderRadius: "20px",
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-        marginTop: theme.spacing(5),
+      padding: theme.spacing(2),
+      borderRadius: "20px",
+      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+      marginTop: theme.spacing(3),
+      [theme.breakpoints.down("sm")]: {
+        padding: theme.spacing(2),
+        marginTop: theme.spacing(2),
+      },
     },
     timelineItem: {
-        '&:hover': {
-            transform: 'translateY(-8px)',
-            transition: 'transform 0.3s ease-in-out',
-        },
+      '&:hover': {
+        transform: 'translateY(-8px)',
+        transition: 'transform 0.3s ease-in-out',
+      },
     },
     timelineContent: {
-        marginBottom: theme.spacing(6),
-        '&:hover $paper': {
-            transform: 'translateY(-5px)',
-            transition: 'transform 0.3s ease-in-out',
-        },
+      marginBottom: theme.spacing(6),
+      '&:hover $paper': {
+        transform: 'translateY(-5px)',
+        transition: 'transform 0.3s ease-in-out',
+      },
     },
     customLogo: {
-        width: "60px",
-        height: "60px",
-        marginBottom: theme.spacing(1),
-        borderRadius: "50%",
-        border: "3px solid #3498db",
-        backgroundColor: "#fff",
-        padding: theme.spacing(1),
-        boxShadow: "0 5px 15px rgba(0, 0, 0, 0.2)",
-        transition: 'all 0.3s ease',
-        '&:hover': {
-            filter: 'brightness(1.2)',
-        },
+      width: "50px",
+      height: "50px", 
+      borderRadius: "50%",
+      border: "3px solid #3498db",
+      backgroundColor: "#fff",
+      padding: theme.spacing(1),
+      boxShadow: "0 5px 15px rgba(0, 0, 0, 0.2)",
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        filter: 'brightness(1.2)',
+      },
+      [theme.breakpoints.down("sm")]: {
+        width: "40px", 
+        height: "40px", 
+      },
     },
     connector: {
-        background: "linear-gradient(to bottom, #FFD700, #FF8C00)",
-        height: "80px",
-        borderRadius: "5px",
-        boxShadow: "0 3px 8px rgba(0, 0, 0, 0.15)",
+      background: "linear-gradient(to bottom, #FFD700, #FF8C00)",
+      height: "60px",
+      borderRadius: "5px",
+      boxShadow: "0 3px 8px rgba(0, 0, 0, 0.15)",
     },
     paper: {
-        padding: theme.spacing(3),
-        backgroundColor: "#f0f0f0",
-        borderRadius: "15px",
-        boxShadow: "0 8px 30px rgba(0, 0, 0, 0.15)",
-        transition: "all 0.3s ease",
-        '&:hover': {
-            boxShadow: "0 10px 40px rgba(0, 0, 0, 0.2)",
-        },
+      padding: theme.spacing(2),
+      backgroundColor: "#f0f0f0",
+      borderRadius: "15px",
+      boxShadow: "0 8px 30px rgba(0, 0, 0, 0.15)",
+      transition: "all 0.3s ease",
+      '&:hover': {
+        boxShadow: "0 10px 40px rgba(0, 0, 0, 0.2)",
+      },
+      [theme.breakpoints.down("sm")]: {
+        padding: theme.spacing(1),
+      },
     },
     year: {
-        color: "#FF6347",
-        fontWeight: "bold",
-        fontFamily: "'Poppins', sans-serif",
-        fontSize: "1.4rem",
+      color: "#FF6347",
+      fontWeight: "bold",
+      fontFamily: "'Poppins', sans-serif",
+      fontSize: "1.2rem", 
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "1rem", 
+      },
     },
     title: {
-        color: "#2c3e50",
-        fontFamily: "'Poppins', sans-serif",
-        fontWeight: "600",
-        marginBottom: theme.spacing(1),
+      color: "#2c3e50",
+      fontFamily: "'Poppins', sans-serif",
+      fontWeight: "600",
+      marginBottom: theme.spacing(1),
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "1rem", 
+    },
     },
 }));
+  
 
 export default Technologies;

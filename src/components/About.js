@@ -51,13 +51,16 @@ export const About = ({ title, dark, id }) => {
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    minHeight: "100vh",
+    minHeight: "100vh", 
   },
   sectiondark: {
     background: "#333",
     color: "#fff",
   },
   sectioncontent: {
+    [theme.breakpoints.down("sm")]: {
+      maxWidth:"95vw",
+    },
     maxWidth: "80vw",
     margin: "0 auto",
   },
@@ -105,6 +108,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
+    [theme.breakpoints.down("sm")]: {
+      width: "150px", 
+      margin: theme.spacing(2),
+    },
     width: "250px",
     height: "auto",
     objectFit: "cover",
@@ -117,22 +124,28 @@ const useStyles = makeStyles((theme) => ({
     bottom: "2rem",
     right: "2rem",
     [theme.breakpoints.down("sm")]: {
-      bottom: "2.5rem",
+      bottom: "2rem",
       right: "1rem",
     },
     textDecoration: "none",
     backgroundColor: "#0077b6",
     color: "#fff",
-    padding: theme.spacing(2, 4),
+    padding: theme.spacing(1, 3),
     fontWeight: "bold",
-    borderRadius: "25px",
-    fontSize: "1.1rem",
+    borderRadius: "20px", 
+    fontSize: "0.9rem", 
+    height: "35px", 
+    display: "flex", 
+    alignItems: "center", 
+    justifyContent: "center", 
     transition: "background-color 0.3s ease, transform 0.3s ease",
     "&:hover": {
       background: "linear-gradient(90deg, #0077b6 0%, #00b4d8 100%)",
-      transform: "scale(1.1)", 
+      transform: "scale(1.05)", 
     },
   },
 }));
 
 export default About;
+
+

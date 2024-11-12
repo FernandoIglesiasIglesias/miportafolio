@@ -162,13 +162,18 @@ const useStyles = makeStyles((theme) => ({
     right: 10,
   },
   sidebar: {
-    width: "40vw",
+    width: "40vw", 
     [theme.breakpoints.down("sm")]: {
-      width: "60vw"
+      width: "60vw", 
+      padding: theme.spacing(2), 
     },
     "& h5": {
-      margin: theme.spacing(10, 0, 0, 4),
-      fontSize: "1.4rem",
+      margin: theme.spacing(6, 0, 0, 4), 
+      fontSize: "1.4rem", 
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "1.2rem", 
+        margin: theme.spacing(6, 0, 0, 2), 
+      },
       color: "#333",
       fontWeight: "bold",
     },
@@ -200,5 +205,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 }));
+
 
 export default Navbar;
